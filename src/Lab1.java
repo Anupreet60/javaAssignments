@@ -7,14 +7,14 @@ public class Lab1 {
         Random ran = new Random();
 
         // Declare an array to store words
-        String[][] wordSets ={ { "Spring", "Summer", "Autumn", "Winter"},
-        { "Canada", "Japan", "Brazil", "Australia", "Germany"},
-        { "Red", "Blue", "Green", "Yellow", "Purple"}};
+        String[][] wordSets ={ { "Spring", "Summer", "Autumn", "Winter"},//Seasons
+        { "Canada", "Japan", "Brazil", "Australia", "Germany"},//Countries
+        { "Red", "Blue", "Green", "Yellow", "Purple"}};//Colours
 
         boolean playAgain = true;
-
+       //Start the Game
         while (playAgain) {
-            // Randomly select a word
+            // Displaying the menu to select a topic
             System.out.println("/nWelcome to the Hangman Game! Please select a topic:");
             System.out.println("1. Seasons");
             System.out.println("2.Colors");
@@ -22,6 +22,7 @@ public class Lab1 {
             System.out.println("Enter your choice(1/2/3):");
             int choice =scanner.nextInt();
 
+            //validating user choice
             if(choice<1 || choice>3) {
                 System.out.println("Invalid choice.Please select a valid topic");
                 continue;
