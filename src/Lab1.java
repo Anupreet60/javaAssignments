@@ -7,12 +7,27 @@ public class Lab1 {
         Random ran = new Random();
 
         // Declare an array to store words
-        String[] words = {"Spring", "Summer", "Autumn", "Winter", "Canada", "Japan", "Brazil", "Australia", "Germany", "Red", "Blue", "Green", "Yellow", "Purple"};
+        String[][] wordSets ={ { "Spring", "Summer", "Autumn", "Winter"},
+        { "Canada", "Japan", "Brazil", "Australia", "Germany"},
+        { "Red", "Blue", "Green", "Yellow", "Purple"}};
 
         boolean playAgain = true;
 
         while (playAgain) {
             // Randomly select a word
+            System.out.println("/nWelcome to the Hangman Game! Please select a topic:");
+            System.out.println("1. Seasons");
+            System.out.println("2.Colors");
+            System.out.println("2.Countries");
+            System.out.println("Enter your choice(1/2/3):");
+            int choice =scanner.nextInt();
+
+            if(choice<1 || choice>3) {
+                System.out.println("Invalid choice.Please select a valid topic");
+                continue;
+            }
+            //Select set of words based upon user choice
+            String[] words = wordSets[choice - 1];
             String selectedWord = words[ran.nextInt(words.length)];
             char[] hiddenWord = new char[selectedWord.length()];
             for (int i = 0; i < hiddenWord.length; i++) {
