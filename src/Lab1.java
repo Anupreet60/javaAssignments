@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-
+//Starting Lab2
 public class Lab1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
