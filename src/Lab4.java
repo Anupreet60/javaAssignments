@@ -4,10 +4,10 @@ public class Lab4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-
+        //Generate a Random Integer
         int computer = (int)(Math.random() * 3);
 
-
+        //Prompt the user to enter a integer
         System.out.print("scissor (0), rock (1), paper (2): ");
         int user = input.nextInt();
 
@@ -27,7 +27,7 @@ public class Lab4 {
             case 2: System.out.print("paper ");
         }
 
-
+       //Display Results
         if (computer == user)
             System.out.println(" too. It is a draw");
         else
