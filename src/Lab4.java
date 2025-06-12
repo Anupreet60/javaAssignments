@@ -1,14 +1,12 @@
 import java.util.Random;
 import java.util.Scanner;
-//Lab 5
+//Lab6
 public class Lab4 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Random random = new Random();
 
-
-        //Added the lizard and spock
-
+        // Added the lizard and spock options
         String[] options = {"scissors", "rock", "paper", "lizard", "spock"};
 
         int userScore = 0;
@@ -18,12 +16,14 @@ public class Lab4 {
             System.out.print("\nChoose your move (scissors, rock, paper, lizard, spock), or type 'exit' to quit: ");
             String playerChoice = scan.nextLine().trim().toLowerCase();
 
+            // Adding the quit option
             if (playerChoice.equals("exit")) {
                 System.out.println("Final Score - You: " + userScore + ", Computer: " + computerScore);
                 System.out.println("Thanks for playing!");
                 break;
             }
 
+            // Validate user input including lizard and spock
             if (!playerChoice.equals("scissors") && !playerChoice.equals("rock") &&
                     !playerChoice.equals("paper") && !playerChoice.equals("lizard") &&
                     !playerChoice.equals("spock")) {
@@ -31,6 +31,7 @@ public class Lab4 {
                 continue;
             }
 
+            // Generate computer choice
             String computerChoice = options[random.nextInt(options.length)];
             System.out.println("Computer chose: " + computerChoice);
 
