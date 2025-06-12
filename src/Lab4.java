@@ -1,10 +1,14 @@
 import java.util.Random;
 import java.util.Scanner;
-
+//Lab 5
 public class Lab4 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Random random = new Random();
+
+
+        //Added the lizard and spock
+
         String[] options = {"scissors", "rock", "paper", "lizard", "spock"};
 
         int userScore = 0;
